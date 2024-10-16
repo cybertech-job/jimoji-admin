@@ -3,7 +3,7 @@ import { MdOutlineDashboard } from "react-icons/md";
 import { FaRegWindowRestore } from "react-icons/fa6";
 import { IoDocumentText } from "react-icons/io5";
 import { useLocation, useNavigate, useNavigation } from 'react-router-dom';
-import logo from "../../assets/images/logo.svg"
+import logo from "../../assets/logo.svg"
 
 
 
@@ -35,7 +35,7 @@ const SideBar = () => {
 
 
   return (
-    <div className=' bg-[#f4f4f4] w-[18.16vw] h-[100%] border-r-[0.1389vw] border-[#232321] border-opacity-[20%] pt-[2vw]'>
+    <div className='hidden lg:block bg-[#f4f4f4] w-[18.16vw] h-auto border-r-[0.1389vw] border-[#232321] border-opacity-[20%] pt-[2vw]'>
         <div>
 
             <div className='flex flex-col items-center gap-[1.11vw]'>
