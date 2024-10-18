@@ -1,11 +1,14 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
+import OrderOne from '../components/order/OrderOne'
 
 const Order = () => {
     
 
   return (
-    <div>Order</div>
+    <div className='overflow-hidden'>
+      <OrderOne/>
+    </div>
   )
 }
 

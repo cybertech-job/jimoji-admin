@@ -5,6 +5,7 @@ import Product from './pages/Product'
 import Order from './pages/Order'
 import SideBar from './components/common/SideBar'
 import Header from './components/common/Header'
+import OrderDetails from './components/order/OrderDetails'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path='/' element={<Dashboard/>} />
           <Route path='/product' element={<Product/>} />
           <Route path='/order' element={<Order/>} />
+          <Route path='/details' element={<OrderDetails/>} />
         </Routes>
 
       </div>
