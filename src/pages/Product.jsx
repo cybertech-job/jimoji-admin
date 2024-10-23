@@ -109,7 +109,7 @@ const Product = () => {
   };
 
   return (
-    <div className='p-6 lg:p-8 overflow-x-hidden w-full relative'>
+    <div className='p-6 lg:p-8  w-full relative  overflow-y-hidden hover:overflow-y-auto h-[85vh]  scrollbar-thin overflow-auto scrollbar-gutter-stable'>
       {/* Product Header */}
       <div className="product-header flex flex-col lg:flex-row justify-center lg:justify-between items-center">
         <div>
