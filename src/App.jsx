@@ -11,7 +11,7 @@ function App() {
 
 
   return (
-    <div className='flex bg-[#E7E7E3] w-[100vw] h-[100vh]'>
+    <div className='flex bg-[#E7E7E3] w-[100vw] h-auto'>
       <Router>
       <SideBar />
       <div className='w-full'>
