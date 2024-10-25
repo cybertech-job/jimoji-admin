@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { IoCalendarOutline } from "react-icons/io5";
 import { BiDotsVerticalRounded } from "react-icons/bi";
-import tgimage from "../../assets/images/tgtech_image.jpeg"; 
+import tgimage from "../../assets/tgtechimage.jpeg"; 
 import { Link } from 'react-router-dom';
 
 const OrderOne = () => {

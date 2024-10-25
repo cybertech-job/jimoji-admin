@@ -4,7 +4,7 @@ import { IoChevronDown } from "react-icons/io5";
 import { IoPersonOutline } from "react-icons/io5";
 import { IoBagHandleOutline } from "react-icons/io5";
 import { HiOutlinePrinter } from "react-icons/hi";
-import image from "../../assets/images/Mastercard-Logo.png"
+import image from "../../assets/MastercardLogo.png"
 import OrderProduct from './OrderProduct';
 
 
