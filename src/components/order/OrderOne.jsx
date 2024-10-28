@@ -1,22 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { IoCalendarOutline } from "react-icons/io5";
 import { BiDotsVerticalRounded } from "react-icons/bi";
-import tgimage from "../../assets/tgtechimage.jpeg"; 
-import { Link } from 'react-router-dom';
+import tgimage from "../../assets/tgtechimage.jpeg";
+import { Link } from "react-router-dom";
 
 const OrderOne = () => {
-  const [activePage, setActivePage] = useState(1)
+  const [activePage, setActivePage] = useState(1);
 
-  const handleClick =(pageNumber)=> {
-    setActivePage(pageNumber)
-  }
+  const handleClick = (pageNumber) => {
+    setActivePage(pageNumber);
+  };
 
   return (
     <div className="px-3 py-4">
       <div className="flex justify-between">
         <div className="flex flex-col">
           <h2 className="text-[24px] font-[600] text-black">Orders List</h2>
-          <p className="text-[16px] font-[400] text-[#000]">Home &gt; Order List</p>
+          <p className="text-[16px] font-[400] text-[#000]">
+            Home &gt; Order List
+          </p>
         </div>
         <div className="flex flex-col gap-5 mt-8 pr-8">
           <h2 className="flex gap-3">
@@ -65,18 +67,77 @@ const OrderOne = () => {
 
           <tbody>
             {[
-              { id: '#25426', date: 'Nov 8th, 2023', name: 'Tgtech', status: 'Delivered', amount: '₹200.00', image: tgimage },
-              { id: '#25425', date: 'Nov 7th, 2023', name: 'Komal', status: 'Canceled', amount: '₹200.00', image: 'https://example.com/images/komal.jpeg' },
-              { id: '#25424', date: 'Nov 6th, 2023', name: 'Nikhil', status: 'Delivered', amount: '₹200.00', image: 'https://example.com/images/nikhil.jpeg' },
-              { id: '#25423', date: 'Nov 5th, 2023', name: 'Shivam', status: 'Canceled', amount: '₹200.00', image: 'https://example.com/images/shivam.jpeg' },
-              { id: '#25422', date: 'Nov 4th, 2023', name: 'Shadab', status: 'Delivered', amount: '₹200.00', image: 'https://example.com/images/shadab.jpeg' },
-              { id: '#25421', date: 'Nov 2nd, 2023', name: 'Yogesh', status: 'Delivered', amount: '₹200.00', image: 'https://example.com/images/yogesh.jpeg' },
-              { id: '#25423', date: 'Nov 1st, 2023', name: 'Sunita', status: 'Canceled', amount: '₹200.00', image: 'https://example.com/images/sunita.jpeg' },
-              { id: '#25421', date: 'Nov 1st, 2023', name: 'Priyanka', status: 'Delivered', amount: '₹200.00', image: 'https://example.com/images/priyanka.jpeg' },
+              {
+                id: "25426",
+                date: "Nov 8th, 2023",
+                name: "Tgtech",
+                status: "Delivered",
+                amount: "₹200.00",
+                image: tgimage,
+              },
+              {
+                id: "25425",
+                date: "Nov 7th, 2023",
+                name: "Komal",
+                status: "Canceled",
+                amount: "₹200.00",
+                image: "https://example.com/images/komal.jpeg",
+              },
+              {
+                id: "25424",
+                date: "Nov 6th, 2023",
+                name: "Nikhil",
+                status: "Delivered",
+                amount: "₹200.00",
+                image: "https://example.com/images/nikhil.jpeg",
+              },
+              {
+                id: "25423",
+                date: "Nov 5th, 2023",
+                name: "Shivam",
+                status: "Canceled",
+                amount: "₹200.00",
+                image: "https://example.com/images/shivam.jpeg",
+              },
+              {
+                id: "25422",
+                date: "Nov 4th, 2023",
+                name: "Shadab",
+                status: "Delivered",
+                amount: "₹200.00",
+                image: "https://example.com/images/shadab.jpeg",
+              },
+              {
+                id: "25421",
+                date: "Nov 2nd, 2023",
+                name: "Yogesh",
+                status: "Delivered",
+                amount: "₹200.00",
+                image: "https://example.com/images/yogesh.jpeg",
+              },
+              {
+                id: "25423",
+                date: "Nov 1st, 2023",
+                name: "Sunita",
+                status: "Canceled",
+                amount: "₹200.00",
+                image: "https://example.com/images/sunita.jpeg",
+              },
+              {
+                id: "25421",
+                date: "Nov 1st, 2023",
+                name: "Priyanka",
+                status: "Delivered",
+                amount: "₹200.00",
+                image: "https://example.com/images/priyanka.jpeg",
+              },
             ].map((order, index) => (
               <tr key={index} className="border-b">
                 <td className="p-5 ">
-                  <Link to="/details"> <input type="checkbox" /> </Link>
+                  <Link to={`/order/${order.id}`}>
+                    {" "}
+                    <input type="checkbox" />{" "}
+                  </Link>
                 </td>
                 <td className="p-3 text-[14px]">Lorem Ipsum</td>
                 <td className="p-3 text-[14px]">{order.id}</td>
@@ -109,22 +170,25 @@ const OrderOne = () => {
       {/* Pagination */}
       <div className="flex gap-5 items-center mt-6">
         <div className="flex items-center space-x-5">
-
-        {[1, 2, 3, 4,].map((page) => (
+          {[1, 2, 3, 4].map((page) => (
             <button
               key={page}
               onClick={() => handleClick(page)}
               className={`px-4 py-1 border-2 border-[#232321] rounded-xl ${
-                activePage === page ? 'bg-black text-white' : 'bg-transparent'
+                activePage === page ? "bg-black text-white" : "bg-transparent"
               }`}
             >
               {page}
             </button>
           ))}
-          
+
           <button className="px-1 py-1">...</button>
-          <button id='10' className="px-4 py-1 border-2 border-[#232321] rounded-xl">10</button>
-         
+          <button
+            id="10"
+            className="px-4 py-1 border-2 border-[#232321] rounded-xl"
+          >
+            10
+          </button>
         </div>
         <button className="px-7 py-1.5 border-2 border-[#232321] bg-transparent  rounded-xl">
           Next &gt;
