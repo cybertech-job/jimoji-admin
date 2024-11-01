@@ -5,9 +5,17 @@ import Product from './pages/Product'
 import Order from './pages/Order'
 import SideBar from './components/common/SideBar'
 import Header from './components/common/Header'
+import AddProduct from './pages/AddProduct'
+import { prodData } from "./components/Product/productData"
 
 function App() {
+  const [productData, setProductData] = useState([
+    
+  ]);
 
+function handleAddProduct(newProduct) {
+  setProductData((prev) => [...prev, newProduct]);
+}
 
 
   return (
@@ -18,8 +26,9 @@ function App() {
       <Header />
         <Routes>
           <Route path='/' element={<Dashboard/>} />
-          <Route path='/product' element={<Product/>} />
+          <Route path='/product' element={<Product productData={productData} />} />
           <Route path='/order' element={<Order/>} />
+          <Route path='/addprod' element={<AddProduct handleAddProduct={handleAddProduct} />} />
         </Routes>
 
       </div>
