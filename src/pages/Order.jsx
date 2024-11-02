@@ -6,7 +6,7 @@ const Order = () => {
     
 
   return (
-    <div className='overflow-hidden'>
+    <div className='p-6 lg:p-8  w-full relative  overflow-y-hidden hover:overflow-y-auto h-[85vh]  scrollbar-thin overflow-auto scrollbar-gutter-stable'>
       <OrderOne/>
     </div>
   )

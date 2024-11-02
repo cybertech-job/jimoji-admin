@@ -13,7 +13,7 @@ import OrderProduct from './OrderProduct';
 
 const OrderDetails = () => {
   return (
-    <section className='p-6 '>
+    <section className='p-6'>
         <div>
             <h1 className='text-[24px] font-semibold'>Orders Details</h1>
             <h3 className='text-[16px] font-[400]'>Home &gt; Order List &gt; Order Details</h3>
