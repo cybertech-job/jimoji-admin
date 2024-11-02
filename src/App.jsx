@@ -5,7 +5,6 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-import {BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom'
 import Dashboard from './pages/Dashboard'
 import Product from './pages/Product'
 import Order from './pages/Order'
