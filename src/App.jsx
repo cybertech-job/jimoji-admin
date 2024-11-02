@@ -1,5 +1,10 @@
-import { useState } from 'react'
-import {BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom'
+import { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Dashboard from './pages/Dashboard'
 import Product from './pages/Product'
 import Order from './pages/Order'
@@ -12,9 +17,6 @@ import productData from "./components/Product/productData"
 import { RecoilRoot } from 'recoil'
 
 function App() {
-
-
-
   return (
     <RecoilRoot>
       <div className='flex bg-[#E7E7E3] w-[100vw] h-[100vh]'>
@@ -40,4 +42,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
