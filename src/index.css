@@ -1,26 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* globals.css */
 @layer utilities {
-    .hide-scrollbar::-webkit-scrollbar {
-      width: 8px; /* Adjust width if needed */
-    }
-    
-    .hide-scrollbar::-webkit-scrollbar-thumb {
-      background: #888; /* Color of the thumb (adjust as needed) */
-      border-radius: 10px; /* Optional: to give the thumb rounded edges */
-    }
-  
-    .hide-scrollbar::-webkit-scrollbar-track {
-      background: transparent; /* Hides the track */
-    }
-  
-    .hide-scrollbar {
-      scrollbar-width: thin; /* For Firefox - makes scrollbar thin */
-      scrollbar-color: #888 transparent; /* Thumb color and track color (transparent) */
-    }
+  .scrollbar-gutter-stable {
+    scrollbar-gutter: stable;
   }
   
-  
+}

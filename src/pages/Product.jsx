@@ -2,31 +2,28 @@
 import React, { useState } from 'react';
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import Card from '../components/Product/Card';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import { useRecoilState } from 'recoil';
+import { myAtom } from '../state/atoms/Show';
+
+
   
 
 const Product = ({ productData }) => {
   const navigate = useNavigate();
+  const [anything, setAnything] = useRecoilState(myAtom)
+
+  setAnything("Hi there")
+  console.log(anything);
   
 
-
   function gotoProductPage() {
-      navigate('/addprod')
+      navigate('/add-product')
     }
 
-  // function handleAddProduct(newProduct) {
-  //   setProductData((prev) => [...prev, newProduct]); // Update product data
-  // }
-  // const handleAddProduct = (newProduct) => {
-  //   const updatedProductData = [
-  //     ...productData,
-  //     { id: productData.length + 1, ...newProduct }
-  //   ];
-  //   setProductData(updatedProductData);
-  // };
 
   return (
-    <div className='p-6 lg:p-8 overflow-x-hidden w-full relative'>
+    <div className='p-6 lg:p-8  w-full relative  overflow-y-hidden hover:overflow-y-auto h-[85vh]  scrollbar-thin overflow-auto scrollbar-gutter-stable'>
       {/* Product Header */}
       <div className="product-header flex flex-col lg:flex-row justify-center lg:justify-between items-center">
         <div>
@@ -47,7 +44,9 @@ const Product = ({ productData }) => {
       <div className='mt-8 grid grid-cols-1 lg:grid-cols-2 justify-items-center xl:grid-cols-3 gap-3 lg:gap-6'>
         {productData.map((item) => (
           <div key={item.id}>
-            <Card product={item} />
+            <Link to={`/product/${item.id}`}>
+              <Card product={item} />
+            </Link>
           </div>
         ))}
       </div>

@@ -1,16 +1,9 @@
 import { useState } from "react"
 
 export default function NewProductForm({ setProductDetails }) {
-    // const [prodName, setProdName] = useState("")
-    // const [prodDesc, setProdDesc] = useState("")
-    // const [prodCategory, setProdCategory] = useState("")
-    // const [prodBrandName, setProdBrandName] = useState("")
-    // const [prodSKU, setProdSKU] = useState("")
-    // const [prodStockQty, setProdStockQty] = useState("")
-    // const [prodRegPrice, setProdRegPrice] = useState("")
-    // const [prodSalesPrice, setProdSalesPrice] = useState("")
+  
     return (
-        <div>
+        <div className="">
             <div className="form-group mb-5">
                 <p className="font-semibold text-xl mb-3">Product Name</p>
                 <input 
