@@ -6,7 +6,7 @@ import Progress from "./Progress";
 
 export default function Card({product}) {
     return (
-        <div className="bg-[#fafafa] rounded-lg p-4 h-auto w-[360px] cursor-pointer">
+        <div className="bg-[#fafafa] rounded-lg p-4 cursor-pointer">
                 <div className="card-header flex justify-between items-start">
                     <div className="product-details">
                         <img src={prodImg} alt="" className="w-14" />
