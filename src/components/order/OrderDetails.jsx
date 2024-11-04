@@ -7,10 +7,6 @@ import { HiOutlinePrinter } from "react-icons/hi";
 import image from "../../assets/MastercardLogo.png"
 import OrderProduct from './OrderProduct';
 
-
-
-
-
 const OrderDetails = () => {
   return (
     <section className='p-6'>
@@ -114,3 +110,4 @@ const OrderDetails = () => {
 }
 
 export default OrderDetails
+
