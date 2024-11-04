@@ -5,39 +5,7 @@ import { IoImageOutline } from "react-icons/io5";
 import { useNavigate, useLocation } from "react-router-dom";
 
 export default function AddProduct({ handleAddProduct }) {
-    // const navigate = useNavigate()
-    // const [images, setImages] = useState([]);
-    // const [productDetails, setProductDetails] = useState({})
 
-    // const handleImageUpload = (event) => {
-    //     const file = event.target.files[0];
-    //     if (file) {
-    //         const reader = new FileReader();
-    //         reader.onloadend = () => {
-    //             if (images.length < 5) {
-    //                 setImages((prevImages) => [...prevImages, reader.result]);
-    //             } else {
-    //                 alert('You can only upload up to 5 images.');
-    //             }
-    //         };
-    //         reader.readAsDataURL(file);
-    //     }
-    // };
-
-    // const handleSave = () => {
-    //     if (!images[0]) {
-    //         alert("Please upload a main image.");
-    //         return;
-    //     }
-    //     const productData = {
-    //         ...productDetails,
-    //         mainImage: images[0],
-    //     };
-
-    //     console.log("Product saved:", productData);
-
-    //     navigate('/product');
-    // };
 
     const navigate = useNavigate();
 
@@ -90,7 +58,7 @@ export default function AddProduct({ handleAddProduct }) {
 
 
     return (
-        <div className="p-6 h-auto">
+        <div className="p-6 w-full relative overflow-y-hidden hover:overflow-y-auto h-[85vh] scrollbar-thin overflow-auto scrollbar-gutter-stable">
             {/* Header */}
             <div className="mb-6">
                 <h1 className='font-bold text-3xl mb-2'>Product Details</h1>
@@ -170,3 +138,4 @@ export default function AddProduct({ handleAddProduct }) {
         </div>
     );
 }
+

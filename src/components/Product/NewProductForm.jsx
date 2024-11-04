@@ -1,4 +1,3 @@
-import { useState } from "react"
 
 export default function NewProductForm({ setProductDetails }) {
   
@@ -10,8 +9,6 @@ export default function NewProductForm({ setProductDetails }) {
                     type="text" 
                     placeholder="Type name here" 
                     className="border-[2px] border-black rounded-xl p-3 text-lg w-[100%]"
-                    // value={prodName}
-                    // onChange={(e) => setProductDetails(e.target.value)}
                     onChange={(e) => setProductDetails(prev => ({ ...prev, prodName: e.target.value }))} 
                 />
             </div>
@@ -21,8 +18,6 @@ export default function NewProductForm({ setProductDetails }) {
                     type="text" 
                     placeholder="Type product alias here" 
                     className="border-[2px] border-black rounded-xl p-3 text-lg w-[100%]"
-                    // value={prodName}
-                    // onChange={(e) => setProductDetails(e.target.value)}
                     onChange={(e) => setProductDetails(prev => ({ ...prev, prodSubtitle: e.target.value }))} 
                 />
             </div>
@@ -33,8 +28,6 @@ export default function NewProductForm({ setProductDetails }) {
                     type="text" 
                     placeholder="Type description here" 
                     className="border-[2px] border-black rounded-xl p-3 text-lg w-[100%] h-[200px]"
-                    // value={prodDesc}
-                    // onChange={(e) => {setProdDesc(e.target.value)}} 
                     onChange={(e) => setProductDetails(prev => ({ ...prev, prodDesc: e.target.value }))}
                 />
             </div>
@@ -45,8 +38,6 @@ export default function NewProductForm({ setProductDetails }) {
                     type="text" 
                     placeholder="Type category here" 
                     className="border-[2px] border-black rounded-xl p-3 text-lg w-[100%]"
-                    // value={prodCategory}
-                    // onChange={(e) => {setProdCategory(e.target.value)}} 
                     onChange={(e) => setProductDetails(prev => ({ ...prev, prodCategory: e.target.value }))}
                 />
             </div>
@@ -57,8 +48,6 @@ export default function NewProductForm({ setProductDetails }) {
                     type="text" 
                     placeholder="Type brand name here" 
                     className="border-[2px] border-black rounded-xl p-3 text-lg w-[100%]"
-                    // value={prodBrandName}
-                    // onChange={(e) => {setProdBrandName(e.target.value)}} 
                     onChange={(e) => setProductDetails(prev => ({ ...prev, prodBrandName: e.target.value }))}
                 />
             </div>
@@ -71,8 +60,6 @@ export default function NewProductForm({ setProductDetails }) {
                         type="text" 
                         placeholder="Fox-3983" 
                         className="border-[2px] border-black rounded-xl p-3 text-lg w-[100%]"
-                        // value={prodSKU}
-                        // onChange={(e) => {setProdSKU(e.target.value)}} 
                         onChange={(e) => setProductDetails(prev => ({ ...prev, prodSKU: e.target.value }))}
                     />
                 </div>
@@ -82,8 +69,6 @@ export default function NewProductForm({ setProductDetails }) {
                         type="text" 
                         placeholder="1258" 
                         className="border-[2px] border-black rounded-xl p-3 text-lg w-[100%]"
-                        // value={prodStockQty}
-                        // onChange={(e) => {setProdStockQty(e.target.value)}} 
                         onChange={(e) => setProductDetails(prev => ({ ...prev, prodStockQty: e.target.value }))}
                     />
                 </div>
@@ -93,8 +78,6 @@ export default function NewProductForm({ setProductDetails }) {
                         type="text" 
                         placeholder="$1000" 
                         className="border-[2px] border-black rounded-xl p-3 text-lg w-[100%]"
-                        // value={prodRegPrice}
-                        // onChange={(e) => {setProdRegPrice(e.target.value)}} 
                         onChange={(e) => setProductDetails(prev => ({ ...prev, prodRegPrice: e.target.value }))}
                     />
                 </div>
@@ -104,8 +87,6 @@ export default function NewProductForm({ setProductDetails }) {
                         type="text" 
                         placeholder="$450" 
                         className="border-[2px] border-black rounded-xl p-3 text-lg w-[100%]"
-                        // value={prodSalesPrice}
-                        // onChange={(e) => {setProdSalesPrice(e.target.value)}} 
                         onChange={(e) => setProductDetails(prev => ({ ...prev, prodSalesPrice: e.target.value }))}
                     />
                 </div>

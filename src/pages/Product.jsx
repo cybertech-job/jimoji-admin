@@ -1,21 +1,16 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import Card from '../components/Product/Card';
 import { useNavigate, Link } from 'react-router-dom';
-import { useRecoilState } from 'recoil';
-import { myAtom } from '../state/atoms/Show';
+import Pagination from '../components/common/Pagination';
+
 
 
   
 
 const Product = ({ productData }) => {
   const navigate = useNavigate();
-  const [anything, setAnything] = useRecoilState(myAtom)
-
-  setAnything("Hi there")
-  console.log(anything);
-  
 
   function gotoProductPage() {
       navigate('/add-product')
@@ -50,6 +45,8 @@ const Product = ({ productData }) => {
           </div>
         ))}
       </div>
+
+      <Pagination />
 
     
     </div>
