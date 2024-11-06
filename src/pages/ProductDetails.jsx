@@ -1,30 +1,4 @@
 
-// import React from 'react';
-// import { useState } from "react";
-// import ProductDetailsForm from "../components/Product/ProductDetailsForm"
-// import { IoImageOutline } from "react-icons/io5";
-// import { useNavigate, useLocation } from "react-router-dom";
-// import { useParams } from 'react-router-dom';
-
-// const ProductDetails = ({ productData }) => {
-
- 
-//   return (
-//     <div className="p-6 w-full relative overflow-y-hidden hover:overflow-y-auto h-[85vh] scrollbar-thin overflow-auto scrollbar-gutter-stable">
-//             {/* Header */}
-//             <div className="mb-6">
-//                 <h1 className='font-bold text-3xl mb-2'>Product Details</h1>
-//                 <h3 className="font-semibold text-xl">Home &gt; All Products &gt; Product Details</h3>
-//             </div>
-
-//           <h1>{product.name}</h1>
-//         </div>
-//   );
-// };
-
-// export default ProductDetails;
-
-
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
@@ -72,120 +46,122 @@ const ProductDetails = ({ productData, handleUpdateProduct, handleDeleteProduct 
     };
 
     return (
-        <div className="product-details-container p-8">
-            <h2 className="font-semibold text-2xl mb-4">Product Details</h2>
+        <div className="p-6 w-full relative overflow-y-hidden hover:overflow-y-auto h-[85vh] scrollbar-thin overflow-auto scrollbar-gutter-stable">
+            <h2 className="font-bold text-3xl mb-2">Product Details</h2>
+            <h3 className='font-semibold text-xl'>Home &gt; All Products &gt; Product Details</h3>
             
-            <div className="flex">
-                <div className="w-2/3 pr-8">
+            <div className="mt-8 bg-white rounded-lg p-4 h-auto grid grid-cols-1 lg:grid-cols-[55%,45%] gap-3">
+                <div className="">
                     {/* Product Name */}
-                    <div className="mb-4">
-                        <label className="font-semibold">Product Name</label>
+                    <div className="mb-5">
+                        <label className="font-semibold text-xl mb-3">Product Name</label>
                         <input 
                             type="text" 
                             name="name" 
-                            value={productDetails.name} 
+                            value={productDetails.title} 
                             onChange={handleInputChange} 
-                            className="border w-full p-2 mt-2"
+                            className="border-[2px] border-black rounded-xl p-3 text-lg w-[100%]"
+                        />
+                    </div>
+
+                    {/* Product Alias */}
+                    <div className="mb-5">
+                        <label className="font-semibold text-xl mb-3">Product Alias</label>
+                        <input 
+                            type="text" 
+                            name="name" 
+                            value={productDetails.subtitle} 
+                            onChange={handleInputChange} 
+                            className="border-[2px] border-black rounded-xl p-3 text-lg w-[100%]"
                         />
                     </div>
 
                     {/* Description */}
-                    <div className="mb-4">
-                        <label className="font-semibold">Description</label>
+                    <div className="mb-5">
+                        <label className="font-semibold text-xl mb-3">Description</label>
                         <textarea 
                             name="description" 
                             value={productDetails.description} 
                             onChange={handleInputChange} 
-                            className="border w-full p-2 mt-2 h-24"
+                            className="border-[2px] border-black rounded-xl p-3 text-lg w-[100%] h-[200px]"
                         />
                     </div>
 
-                    {/* Category, Brand Name */}
-                    <div className="mb-4 flex gap-4">
-                        <div className="w-1/2">
-                            <label className="font-semibold">Category</label>
+                    {/* Product Category */}
+                    <div className="mb-5">
+                            <label className="font-semibold text-xl mb-3">Category</label>
                             <input 
                                 type="text" 
                                 name="category" 
                                 value={productDetails.category} 
                                 onChange={handleInputChange} 
-                                className="border w-full p-2 mt-2"
+                                className="border-[2px] border-black rounded-xl p-3 text-lg w-[100%]"
                             />
                         </div>
-                        <div className="w-1/2">
-                            <label className="font-semibold">Brand Name</label>
+
+                    {/* Product Brand Name */}
+                    <div className="mb-5">
+                            <label className="font-semibold text-xl mb-3">Brand Name</label>
                             <input 
                                 type="text" 
                                 name="brand" 
                                 value={productDetails.brand} 
                                 onChange={handleInputChange} 
-                                className="border w-full p-2 mt-2"
+                                className="border-[2px] border-black rounded-xl p-3 text-lg w-[100%]"
                             />
-                        </div>
                     </div>
 
+                    
                     {/* SKU, Stock Quantity */}
-                    <div className="mb-4 flex gap-4">
+                    <div className="mb-5 flex gap-4">
                         <div className="w-1/2">
-                            <label className="font-semibold">SKU</label>
+                            <label className="font-semibold text-xl mb-3">SKU</label>
                             <input 
                                 type="text" 
                                 name="sku" 
                                 value={productDetails.sku} 
                                 onChange={handleInputChange} 
-                                className="border w-full p-2 mt-2"
+                                className="border-[2px] border-black rounded-xl p-3 text-lg w-[100%]"
                             />
                         </div>
                         <div className="w-1/2">
-                            <label className="font-semibold">Stock Quantity</label>
+                            <label className="font-semibold text-xl mb-3">Stock Quantity</label>
                             <input 
                                 type="number" 
                                 name="stockQuantity" 
                                 value={productDetails.stockQuantity} 
                                 onChange={handleInputChange} 
-                                className="border w-full p-2 mt-2"
+                                className="border-[2px] border-black rounded-xl p-3 text-lg w-[100%]"
                             />
                         </div>
                     </div>
 
                     {/* Regular Price, Sale Price */}
-                    <div className="mb-4 flex gap-4">
+                    <div className="mb-5 flex gap-4">
                         <div className="w-1/2">
-                            <label className="font-semibold">Regular Price</label>
+                            <label className="font-semibold text-xl mb-3">Regular Price</label>
                             <input 
                                 type="text" 
                                 name="regularPrice" 
                                 value={productDetails.regularPrice} 
                                 onChange={handleInputChange} 
-                                className="border w-full p-2 mt-2"
+                                className="border-[2px] border-black rounded-xl p-3 text-lg w-[100%]"
                             />
                         </div>
                         <div className="w-1/2">
-                            <label className="font-semibold">Sale Price</label>
+                            <label className="font-semibold text-xl mb-3">Sale Price</label>
                             <input 
                                 type="text" 
                                 name="salePrice" 
                                 value={productDetails.salePrice} 
                                 onChange={handleInputChange} 
-                                className="border w-full p-2 mt-2"
+                                className="border-[2px] border-black rounded-xl p-3 text-lg w-[100%]"
                             />
                         </div>
                     </div>
-
-                    {/* Tags */}
-                    <div className="mb-4">
-                        <label className="font-semibold">Tag</label>
-                        <input 
-                            type="text" 
-                            name="tags" 
-                            value={productDetails.tags} 
-                            onChange={handleInputChange} 
-                            className="border w-full p-2 mt-2"
-                        />
-                    </div>
                 </div>
 
-                {/* Product Gallery */}
+                {/* Product Gallery
                 <div className="w-1/3">
                     <label className="font-semibold">Product Gallery</label>
                     <div className="border-dashed border-2 border-gray-400 p-4 mt-2 text-center">
@@ -204,7 +180,17 @@ const ProductDetails = ({ productData, handleUpdateProduct, handleDeleteProduct 
                             ))}
                         </div>
                     </div>
+                </div> */}
+
+                {/* Main Image Display */}
+                <div className="img-background border-2 border-gray-400 bg-gray-400 h-[400px] rounded-lg mb-8 flex items-center justify-center">
+                        {images[0] ? (
+                            <img src={images[0]} alt="Primary" className="w-full h-full object-cover rounded-lg" />
+                        ) : (
+                            <span className="text-gray-500">Main Image</span>
+                        )}
                 </div>
+
             </div>
 
             <div className="flex justify-end gap-4 mt-8">
